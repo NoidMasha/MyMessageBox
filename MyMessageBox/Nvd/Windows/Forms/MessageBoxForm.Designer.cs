@@ -56,6 +56,7 @@
             this.okButton.TabIndex = 1;
             this.okButton.Text = "Ok";
             this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // cancelButton
             // 
@@ -67,6 +68,7 @@
             this.cancelButton.TabIndex = 2;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // yesButton
             // 
@@ -78,6 +80,7 @@
             this.yesButton.TabIndex = 3;
             this.yesButton.Text = "Yes";
             this.yesButton.UseVisualStyleBackColor = true;
+            this.yesButton.Click += new System.EventHandler(this.yesButton_Click);
             // 
             // noButton
             // 
@@ -89,6 +92,7 @@
             this.noButton.TabIndex = 4;
             this.noButton.Text = "No";
             this.noButton.UseVisualStyleBackColor = true;
+            this.noButton.Click += new System.EventHandler(this.noButton_Click);
             // 
             // MessageBoxForm
             // 
