@@ -28,47 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new Nvd.Windows.Forms.Label();
+            this.textLabel = new Nvd.Windows.Forms.Label();
             this.okButton = new Nvd.Windows.Forms.Button();
+            this.cancelButton = new Nvd.Windows.Forms.Button();
+            this.yesButton = new Nvd.Windows.Forms.Button();
+            this.noButton = new Nvd.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // textLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.textLabel.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLabel.Location = new System.Drawing.Point(13, 13);
+            this.textLabel.Name = "textLabel";
+            this.textLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textLabel.Size = new System.Drawing.Size(329, 98);
+            this.textLabel.TabIndex = 0;
+            this.textLabel.Text = "Text";
+            this.textLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okButton.Location = new System.Drawing.Point(278, 114);
+            this.okButton.Location = new System.Drawing.Point(272, 114);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(65, 34);
+            this.okButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.okButton.Size = new System.Drawing.Size(70, 36);
             this.okButton.TabIndex = 1;
             this.okButton.Text = "Ok";
             this.okButton.UseVisualStyleBackColor = true;
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.Location = new System.Drawing.Point(196, 114);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cancelButton.Size = new System.Drawing.Size(70, 36);
+            this.cancelButton.TabIndex = 2;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            // 
+            // yesButton
+            // 
+            this.yesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.yesButton.Location = new System.Drawing.Point(44, 114);
+            this.yesButton.Name = "yesButton";
+            this.yesButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.yesButton.Size = new System.Drawing.Size(70, 36);
+            this.yesButton.TabIndex = 3;
+            this.yesButton.Text = "Yes";
+            this.yesButton.UseVisualStyleBackColor = true;
+            // 
+            // noButton
+            // 
+            this.noButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.noButton.Location = new System.Drawing.Point(120, 114);
+            this.noButton.Name = "noButton";
+            this.noButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.noButton.Size = new System.Drawing.Size(70, 36);
+            this.noButton.TabIndex = 4;
+            this.noButton.Text = "No";
+            this.noButton.UseVisualStyleBackColor = true;
             // 
             // MessageBoxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 160);
+            this.ClientSize = new System.Drawing.Size(354, 162);
+            this.ControlBox = false;
+            this.Controls.Add(this.noButton);
+            this.Controls.Add(this.yesButton);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MessageBoxForm";
-            this.Text = "MessageBoxForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Message";
             this.Load += new System.EventHandler(this.MessageBoxForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Label label1;
+        private Label textLabel;
         private Button okButton;
+        private Button cancelButton;
+        private Button yesButton;
+        private Button noButton;
     }
 }
