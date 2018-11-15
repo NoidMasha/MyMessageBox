@@ -27,7 +27,7 @@ namespace MyMessageBox
 
         private void button4_Click(object sender, System.EventArgs e)
         {
-            result = MessageBox.Show("warning!!! \n press Ok to Exit", "Error", MessageBoxButtons.OkCancel);
+            result = MessageBox.Show("warning!!! \npress Ok to Exit", "Error", MessageBoxButtons.OkCancel);
             if (result==Nvd.Windows.Forms.DialogResult.Ok)
             {
                 this.Close();
@@ -36,7 +36,7 @@ namespace MyMessageBox
 
         private void button5_Click(object sender, System.EventArgs e)
         {
-            result = MessageBox.Show("warning!!! \n are you sure to Exit?", "Error", MessageBoxButtons.YesNo);
+            result = MessageBox.Show("warning!!! \nare you sure to Exit?", "Error", MessageBoxButtons.YesNo);
             if (result == Nvd.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
@@ -45,12 +45,12 @@ namespace MyMessageBox
 
         private void button6_Click(object sender, System.EventArgs e)
         {
-            result = MessageBox.Show("warning!!!", "Error", MessageBoxButtons.Ok, MessageBoxDefaultButton.Button1);
+            result = MessageBox.Show("هشدار!!! \nخارج خواهید شد!", "خطا", MessageBoxButtons.Ok, MessageBoxOptions.RtlReading);
         }
 
         private void button7_Click(object sender, System.EventArgs e)
         {
-            result = MessageBox.Show("warning!!! \n press Ok to Exit", "Error", MessageBoxButtons.OkCancel, MessageBoxDefaultButton.Button1);
+            result = MessageBox.Show("هشدار!!! \nخارج خواهید شد!", "خطا", MessageBoxButtons.OkCancel, MessageBoxOptions.RtlReading);
             if (result == Nvd.Windows.Forms.DialogResult.Ok)
             {
                 this.Close();
@@ -59,7 +59,7 @@ namespace MyMessageBox
 
         private void button8_Click(object sender, System.EventArgs e)
         {
-            result = MessageBox.Show("warning!!! \n are you sure to Exit?", "Error", MessageBoxButtons.YesNo, MessageBoxDefaultButton.Button1);
+            result = MessageBox.Show("هشدار!!! \nمیخواهید خارج شوید؟!", "خطا", MessageBoxButtons.YesNo, MessageBoxOptions.RtlReading);
             if (result == Nvd.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
@@ -68,12 +68,12 @@ namespace MyMessageBox
 
         private void button9_Click(object sender, System.EventArgs e)
         {
-            result = MessageBox.Show("warning!!!", "Error", MessageBoxButtons.Ok, MessageBoxDefaultButton.Button2);
+            result = MessageBox.Show("warning!!!", "Error", MessageBoxButtons.Ok, MessageBoxOptions.RightAlign);
         }
 
         private void button10_Click(object sender, System.EventArgs e)
         {
-            result = MessageBox.Show("warning!!! \n press Ok to Exit", "Error", MessageBoxButtons.OkCancel, MessageBoxDefaultButton.Button2);
+            result = MessageBox.Show("warning!!! \npress Ok to Exit", "Error", MessageBoxButtons.OkCancel, MessageBoxOptions.RightAlign);
             if (result == Nvd.Windows.Forms.DialogResult.Ok)
             {
                 this.Close();
@@ -82,7 +82,33 @@ namespace MyMessageBox
 
         private void button11_Click(object sender, System.EventArgs e)
         {
-            result = MessageBox.Show("warning!!! \n are you sure to Exit?", "Error", MessageBoxButtons.YesNo, MessageBoxDefaultButton.Button3);
+            result = MessageBox.Show("warning!!! \nare you sure to Exit?", "Error", MessageBoxButtons.YesNo, MessageBoxOptions.RightAlign);
+            if (result == Nvd.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void button12_Click(object sender, System.EventArgs e)
+        {
+            result = MessageBox.Show("هشدار!!! \nخارج خواهید شد!", "خطا", MessageBoxButtons.Ok, MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+        }
+
+        private void button13_Click(object sender, System.EventArgs e)
+        {
+            result = MessageBox.Show("هشدار!!! \nخارج خواهید شد!", "خطا", MessageBoxButtons.OkCancel, MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+            if (result == Nvd.Windows.Forms.DialogResult.Ok)
+            {
+                this.Close();
+            }
+        }
+
+        private void button14_Click(object sender, System.EventArgs e)
+        {
+            result = MessageBox.Show("هشدار!!! \nمیخواهید خارج شوید؟!", "خطا", MessageBoxButtons.YesNo, MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
             if (result == Nvd.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();

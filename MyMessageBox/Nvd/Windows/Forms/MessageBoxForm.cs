@@ -101,6 +101,24 @@
             textLabel.Text = MessageText;
         }
 
+        public System.Windows.Forms.RightToLeft Rtl
+        {
+            set
+            {
+                textLabel.RightToLeft = value;
+            }
+        }
+
+        public bool RtlLayout
+        {
+            set
+            {
+                if (value) { this.RightToLeft = System.Windows.Forms.RightToLeft.Yes; }
+                else { this.RightToLeft = System.Windows.Forms.RightToLeft.No; }
+                this.RightToLeftLayout = value; ;
+            }
+        }
+
         private void okButton_Click(object sender, System.EventArgs e)
         {
             messageBoxResult = Forms.DialogResult.Ok;
