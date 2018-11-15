@@ -156,11 +156,14 @@
             if ((option & MessageBoxOptions.RtlReading) == MessageBoxOptions.RtlReading)
             {
                 form.Rtl = System.Windows.Forms.RightToLeft.Yes;
-                form.ButtonFarsi();
             }
             if ((option & MessageBoxOptions.RightAlign) == MessageBoxOptions.RightAlign)
             {
                 form.RtlLayout = true;
+            }
+            if ((option & MessageBoxOptions.PersianButtons) == MessageBoxOptions.PersianButtons)
+            {
+                form.ButtonFarsi();
             }
             form.ShowDialog();
             return form.MessageBoxResult;
@@ -216,11 +219,14 @@
             if ((option & MessageBoxOptions.RtlReading) == MessageBoxOptions.RtlReading)
             {
                 form.Rtl = System.Windows.Forms.RightToLeft.Yes;
-                form.ButtonFarsi();
             }
             if ((option & MessageBoxOptions.RightAlign) == MessageBoxOptions.RightAlign)
             {
                 form.RtlLayout = true;
+            }
+            if ((option & MessageBoxOptions.PersianButtons) == MessageBoxOptions.PersianButtons)
+            {
+                form.ButtonFarsi();
             }
             form.ShowDialog();
             return form.MessageBoxResult;
