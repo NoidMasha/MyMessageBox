@@ -10,9 +10,7 @@
             form.MessageText = text;
             form.Caption = " ";
             form.OkButtonLeft = 142;
-            form.CancelButtonVisible = false;
-            form.YesButtonVisible = false;
-            form.NoButtonVisible = false;
+            form.OkButtonVisible = true;
             form.OkButtonFocus();
             form.ShowDialog();
             return form.MessageBoxResult;
@@ -24,9 +22,7 @@
             form.MessageText = text;
             form.Caption = "  "+caption;
             form.OkButtonLeft = 142;
-            form.CancelButtonVisible = false;
-            form.YesButtonVisible = false;
-            form.NoButtonVisible = false;
+            form.OkButtonVisible = true;
             form.OkButtonFocus();
             form.ShowDialog();
             return form.MessageBoxResult;
@@ -42,23 +38,21 @@
                 case MessageBoxButtons.Ok:
                     {
                         form.OkButtonLeft = 142;
-                        form.CancelButtonVisible = false;
-                        form.YesButtonVisible = false;
-                        form.NoButtonVisible = false;
+                        form.OkButtonVisible = true;
                         form.OkButtonFocus();
                         break;
                     }
                 case MessageBoxButtons.OkCancel:
                     {
-                        form.YesButtonVisible = false;
-                        form.NoButtonVisible = false;
+                        form.OkButtonVisible = true;
+                        form.CancelButtonVisible = true;
                         form.CancelButtonFocus();
                         break;
                     }
                 case MessageBoxButtons.YesNo:
                     {
-                        form.OkButtonVisible = false;
-                        form.CancelButtonVisible = false;
+                        form.YesButtonVisible = true;
+                        form.NoButtonVisible = true;
                         form.NoButtonLeft = 272;
                         form.YesButtonLeft = 196;
                         form.NoButtonFocus();
@@ -79,16 +73,14 @@
                 case MessageBoxButtons.Ok:
                     {
                         form.OkButtonLeft = 142;
-                        form.CancelButtonVisible = false;
-                        form.YesButtonVisible = false;
-                        form.NoButtonVisible = false;
+                        form.OkButtonVisible = true;
                         form.OkButtonFocus();
                         break;
                     }
                 case MessageBoxButtons.OkCancel:
                     {
-                        form.YesButtonVisible = false;
-                        form.NoButtonVisible = false;
+                        form.OkButtonVisible = true;
+                        form.CancelButtonVisible = true;
                         if (defaultButton == MessageBoxDefaultButton.Button1)
                         {
                             form.OkButtonFocus();
@@ -101,8 +93,8 @@
                     }
                 case MessageBoxButtons.YesNo:
                     {
-                        form.OkButtonVisible = false;
-                        form.CancelButtonVisible = false;
+                        form.YesButtonVisible = true;
+                        form.NoButtonVisible = true;
                         form.NoButtonLeft = 272;
                         form.YesButtonLeft = 196;
                         if (defaultButton == MessageBoxDefaultButton.Button1)
@@ -130,23 +122,21 @@
                 case MessageBoxButtons.Ok:
                     {
                         form.OkButtonLeft = 142;
-                        form.CancelButtonVisible = false;
-                        form.YesButtonVisible = false;
-                        form.NoButtonVisible = false;
+                        form.OkButtonVisible = true;
                         form.OkButtonFocus();
                         break;
                     }
                 case MessageBoxButtons.OkCancel:
                     {
-                        form.YesButtonVisible = false;
-                        form.NoButtonVisible = false;
+                        form.OkButtonVisible = true;
+                        form.CancelButtonVisible = true;
                         form.CancelButtonFocus();
                         break;
                     }
                 case MessageBoxButtons.YesNo:
                     {
-                        form.OkButtonVisible = false;
-                        form.CancelButtonVisible = false;
+                        form.YesButtonVisible = true;
+                        form.NoButtonVisible = true;
                         form.NoButtonLeft = 272;
                         form.YesButtonLeft = 196;
                         form.NoButtonFocus();
@@ -179,16 +169,14 @@
                 case MessageBoxButtons.Ok:
                     {
                         form.OkButtonLeft = 142;
-                        form.CancelButtonVisible = false;
-                        form.YesButtonVisible = false;
-                        form.NoButtonVisible = false;
+                        form.OkButtonVisible = true;
                         form.OkButtonFocus();
                         break;
                     }
                 case MessageBoxButtons.OkCancel:
                     {
-                        form.YesButtonVisible = false;
-                        form.NoButtonVisible = false;
+                        form.OkButtonVisible = true;
+                        form.CancelButtonVisible = true;
                         if (defaultButton == MessageBoxDefaultButton.Button1)
                         {
                             form.OkButtonFocus();
@@ -201,8 +189,8 @@
                     }
                 case MessageBoxButtons.YesNo:
                     {
-                        form.OkButtonVisible = false;
-                        form.CancelButtonVisible = false;
+                        form.YesButtonVisible = true;
+                        form.NoButtonVisible = true;
                         form.NoButtonLeft = 272;
                         form.YesButtonLeft = 196;
                         if (defaultButton == MessageBoxDefaultButton.Button1)

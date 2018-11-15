@@ -87,12 +87,69 @@
         {
             ActiveControl =  noButton;
         }
+        public bool AbortButtonVisible
+        {
+            set
+            {
+                abortButton.Visible = value;
+            }
+        }
+        public int AbortButtonLeft
+        {
+            set
+            {
+                abortButton.Left = value;
+            }
+        }
+        public void AbortButtonFocus()
+        {
+            ActiveControl = abortButton;
+        }
+        public bool IgnoreButtonVisible
+        {
+            set
+            {
+                ignoreButton.Visible = value;
+            }
+        }
+        public int IgnoreButtonLeft
+        {
+            set
+            {
+                ignoreButton.Left = value;
+            }
+        }
+        public void IgnoreButtonFocus()
+        {
+            ActiveControl = ignoreButton;
+        }
+        public bool RetryButtonVisible
+        {
+            set
+            {
+                retryButton.Visible = value;
+            }
+        }
+        public int RetryButtonLeft
+        {
+            set
+            {
+                retryButton.Left = value;
+            }
+        }
+        public void RetryButtonFocus()
+        {
+            ActiveControl = retryButton;
+        }
         public void ButtonFarsi()
         {
             okButton.Text = "اکی";
             cancelButton.Text = "کنسل";
             yesButton.Text = "بلی";
             noButton.Text = "خیر";
+            abortButton.Text = "بیخیال";
+            ignoreButton.Text = "نادید";
+            retryButton.Text = "مجدد";
         }
         private DialogResult messageBoxResult;
         public DialogResult MessageBoxResult
@@ -147,6 +204,24 @@
         private void yesButton_Click(object sender, System.EventArgs e)
         {
             messageBoxResult = Forms.DialogResult.Yes;
+            Close();
+        }
+
+        private void abortButton_Click(object sender, System.EventArgs e)
+        {
+            messageBoxResult = Forms.DialogResult.Abort;
+            Close();
+        }
+
+        private void ignoreButton_Click(object sender, System.EventArgs e)
+        {
+            messageBoxResult = Forms.DialogResult.Ignore;
+            Close();
+        }
+
+        private void retryButton_Click(object sender, System.EventArgs e)
+        {
+            messageBoxResult = Forms.DialogResult.Retry;
             Close();
         }
     }
