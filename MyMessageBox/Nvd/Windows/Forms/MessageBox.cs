@@ -9,11 +9,11 @@
             MessageBoxForm form = new MessageBoxForm();
             form.MessageText = text;
             form.Caption = " ";
-            form.OkButtonVisible = true;
             form.OkButtonLeft = 142;
             form.CancelButtonVisible = false;
             form.YesButtonVisible = false;
             form.NoButtonVisible = false;
+            form.OkButtonFocus();
             form.ShowDialog();
             return form.MessageBoxResult;
         }
@@ -23,11 +23,11 @@
             MessageBoxForm form = new MessageBoxForm();
             form.MessageText = text;
             form.Caption = caption;
-            form.OkButtonVisible = true;
             form.OkButtonLeft = 142;
             form.CancelButtonVisible = false;
             form.YesButtonVisible = false;
             form.NoButtonVisible = false;
+            form.OkButtonFocus();
             form.ShowDialog();
             return form.MessageBoxResult;
         }
@@ -45,12 +45,14 @@
                         form.CancelButtonVisible = false;
                         form.YesButtonVisible = false;
                         form.NoButtonVisible = false;
+                        form.OkButtonFocus();
                         break;
                     }
                 case MessageBoxButtons.OkCancel:
                     {
                         form.YesButtonVisible = false;
                         form.NoButtonVisible = false;
+                        form.CancelButtonFocus();
                         break;
                     }
                 case MessageBoxButtons.YesNo:
@@ -59,6 +61,7 @@
                         form.CancelButtonVisible = false;
                         form.NoButtonLeft = 272;
                         form.YesButtonLeft = 196;
+                        form.NoButtonFocus();
                         break;
                     }
             }

@@ -29,6 +29,10 @@
                 okButton.Left = value;
             }
         }
+        public void OkButtonFocus()
+        {
+            ActiveControl = okButton;
+        }
         public bool CancelButtonVisible
         {
             set
@@ -42,6 +46,10 @@
             {
                 cancelButton.Left = value;
             }
+        }
+        public void CancelButtonFocus()
+        {
+            ActiveControl = cancelButton;
         }
         public bool YesButtonVisible
         {
@@ -57,6 +65,10 @@
                 yesButton.Left = value;
             }
         }
+        public void YesButtonFocus()
+        {
+            ActiveControl = yesButton;
+        }
         public bool NoButtonVisible
         {
             set
@@ -70,6 +82,10 @@
             {
                 noButton.Left = value;
             }
+        }
+        public void NoButtonFocus()
+        {
+            ActiveControl =  noButton;
         }
         private DialogResult messageBoxResult;
         public DialogResult MessageBoxResult
