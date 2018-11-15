@@ -114,5 +114,54 @@ namespace MyMessageBox
                 this.Close();
             }
         }
+
+        private void button15_Click(object sender, System.EventArgs e)
+        {
+            result = MessageBox.Show("هشدار!!! \nخارج خواهید شد!", "خطا", MessageBoxButtons.AbortRetryIgnore, MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign | MessageBoxOptions.PersianButtons);
+        }
+
+        private void button16_Click(object sender, System.EventArgs e)
+        {
+            result = MessageBox.Show("هشدار!!! \nخارج خواهید شد!", "خطا", MessageBoxButtons.RetryCancel, MessageBoxDefaultButton.Button2,
+                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign | MessageBoxOptions.PersianButtons);
+            if (result == Nvd.Windows.Forms.DialogResult.Retry)
+            {
+                this.Close();
+            }
+        }
+
+        private void button17_Click(object sender, System.EventArgs e)
+        {
+            result = MessageBox.Show("هشدار!!! \nمیخواهید خارج شوید؟!", "خطا", MessageBoxButtons.YesNoCancel, MessageBoxDefaultButton.Button3,
+                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign | MessageBoxOptions.PersianButtons);
+            if (result == Nvd.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void button18_Click(object sender, System.EventArgs e)
+        {
+            result = MessageBox.Show("warning!!!", "Error", MessageBoxButtons.AbortRetryIgnore,MessageBoxDefaultButton.Button2);
+        }
+
+        private void button19_Click(object sender, System.EventArgs e)
+        {
+            result = MessageBox.Show("warning!!! \npress Ok to Exit", "Error", MessageBoxButtons.RetryCancel,MessageBoxDefaultButton.Button3);
+            if (result == Nvd.Windows.Forms.DialogResult.Ok)
+            {
+                this.Close();
+            }
+        }
+
+        private void button20_Click(object sender, System.EventArgs e)
+        {
+            result = MessageBox.Show("warning!!! \nare you sure to Exit?", "Error", MessageBoxButtons.YesNoCancel);
+            if (result == Nvd.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
