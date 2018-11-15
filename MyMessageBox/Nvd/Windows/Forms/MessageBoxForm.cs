@@ -87,6 +87,13 @@
         {
             ActiveControl =  noButton;
         }
+        public void ButtonFarsi()
+        {
+            okButton.Text = "اکی";
+            cancelButton.Text = "کنسل";
+            yesButton.Text = "بلی";
+            noButton.Text = "خیر";
+        }
         private DialogResult messageBoxResult;
         public DialogResult MessageBoxResult
         {

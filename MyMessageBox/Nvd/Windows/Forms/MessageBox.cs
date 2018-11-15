@@ -156,6 +156,7 @@
             if ((option & MessageBoxOptions.RtlReading) == MessageBoxOptions.RtlReading)
             {
                 form.Rtl = System.Windows.Forms.RightToLeft.Yes;
+                form.ButtonFarsi();
             }
             if ((option & MessageBoxOptions.RightAlign) == MessageBoxOptions.RightAlign)
             {
@@ -215,6 +216,7 @@
             if ((option & MessageBoxOptions.RtlReading) == MessageBoxOptions.RtlReading)
             {
                 form.Rtl = System.Windows.Forms.RightToLeft.Yes;
+                form.ButtonFarsi();
             }
             if ((option & MessageBoxOptions.RightAlign) == MessageBoxOptions.RightAlign)
             {

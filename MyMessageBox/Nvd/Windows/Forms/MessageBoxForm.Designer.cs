@@ -85,7 +85,7 @@
             // 
             // textLabel
             // 
-            this.textLabel.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLabel.Font = new System.Drawing.Font("Lucida Console", 14F);
             this.textLabel.Location = new System.Drawing.Point(13, 13);
             this.textLabel.Name = "textLabel";
             this.textLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
