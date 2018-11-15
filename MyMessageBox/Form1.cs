@@ -92,13 +92,13 @@ namespace MyMessageBox
         private void button12_Click(object sender, System.EventArgs e)
         {
             result = MessageBox.Show("هشدار!!! \nخارج خواهید شد!", "خطا", MessageBoxButtons.Ok, MessageBoxDefaultButton.Button1,
-                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign | MessageBoxOptions.PersianButtons);
         }
 
         private void button13_Click(object sender, System.EventArgs e)
         {
-            result = MessageBox.Show("هشدار!!! \nخارج خواهید شد!", "خطا", MessageBoxButtons.OkCancel, MessageBoxDefaultButton.Button1,
-                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+            result = MessageBox.Show("هشدار!!! \nخارج خواهید شد!", "خطا", MessageBoxButtons.OkCancel, MessageBoxDefaultButton.Button2,
+                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign | MessageBoxOptions.PersianButtons);
             if (result == Nvd.Windows.Forms.DialogResult.Ok)
             {
                 this.Close();
@@ -107,8 +107,8 @@ namespace MyMessageBox
 
         private void button14_Click(object sender, System.EventArgs e)
         {
-            result = MessageBox.Show("هشدار!!! \nمیخواهید خارج شوید؟!", "خطا", MessageBoxButtons.YesNo, MessageBoxDefaultButton.Button1,
-                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign);
+            result = MessageBox.Show("هشدار!!! \nمیخواهید خارج شوید؟!", "خطا", MessageBoxButtons.YesNo, MessageBoxDefaultButton.Button2,
+                MessageBoxOptions.RtlReading | MessageBoxOptions.RightAlign | MessageBoxOptions.PersianButtons);
             if (result == Nvd.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();

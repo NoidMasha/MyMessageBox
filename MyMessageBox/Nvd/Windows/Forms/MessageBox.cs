@@ -22,8 +22,8 @@
                     {
                         frm.YesButtonVisible = true;
                         frm.NoButtonVisible = true;
-                        frm.NoButtonLeft = 272;
-                        frm.YesButtonLeft = 196;
+                        frm.NoButtonLeft = 196;
+                        frm.YesButtonLeft = 272;
                         break;
                     }
                 case MessageBoxButtons.RetryCancel:
@@ -39,8 +39,8 @@
                         frm.YesButtonVisible = true;
                         frm.NoButtonVisible = true;
                         frm.CancelButtonVisible = true;
-                        frm.YesButtonLeft = 142;
-                        frm.NoButtonLeft = 218;
+                        frm.YesButtonLeft = 218;
+                        frm.NoButtonLeft = 142;
                         frm.CancelButtonLeft = 66;
                         break;
                     }
@@ -50,8 +50,8 @@
                         frm.RetryButtonVisible = true;
                         frm.IgnoreButtonVisible = true;
                         frm.AbortButtonLeft = 66;
-                        frm.RetryButtonLeft = 142;
-                        frm.IgnoreButtonLeft = 218;
+                        frm.RetryButtonLeft = 218;
+                        frm.IgnoreButtonLeft = 142;
                         break;
                     }
             }
@@ -177,7 +177,7 @@
                     }
             }
         }
-        private static void optionsHandle((MessageBoxForm frm, MessageBoxOptions optn)
+        private static void optionsHandle(MessageBoxForm frm, MessageBoxOptions optn)
         {
             if ((optn & MessageBoxOptions.RtlReading) == MessageBoxOptions.RtlReading)
             {
