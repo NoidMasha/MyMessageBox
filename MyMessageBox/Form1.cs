@@ -149,7 +149,7 @@ namespace MyMessageBox
         private void button19_Click(object sender, System.EventArgs e)
         {
             result = MessageBox.Show("warning!!! \npress Ok to Exit", "Error", MessageBoxButtons.RetryCancel,MessageBoxDefaultButton.Button3);
-            if (result == Nvd.Windows.Forms.DialogResult.Ok)
+            if (result == Nvd.Windows.Forms.DialogResult.Retry)
             {
                 this.Close();
             }
