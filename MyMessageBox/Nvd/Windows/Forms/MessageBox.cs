@@ -2,6 +2,7 @@
 {
     public static class MessageBox
     {
+        //this function handles the selected button combination to show them on correct position
         private static void buttonsHandle(MessageBoxForm frm,MessageBoxButtons btns)
         {
             switch (btns)
@@ -56,6 +57,8 @@
                     }
             }
         }
+
+        //this function handles the focused button as default button
         private static void focusHandle(MessageBoxForm frm, MessageBoxButtons btns, MessageBoxDefaultButton defBtn)
         {
             switch (btns)
@@ -177,6 +180,8 @@
                     }
             }
         }
+
+        //this function handles the options selected by user
         private static void optionsHandle(MessageBoxForm frm, MessageBoxOptions optn)
         {
             if ((optn & MessageBoxOptions.RtlReading) == MessageBoxOptions.RtlReading)
@@ -192,10 +197,14 @@
                 frm.ButtonFarsi();
             }
         }
+
+        /// <summary>
+        /// To show simple message to user with OK button
+        /// </summary>
+        /// <param name="text">The message that will be shown</param>
+        /// <returns></returns>
         public static DialogResult Show(string text)
         {
-            //return System.Windows.Forms.MessageBox.Show(text:messageText);
-
             MessageBoxForm form = new MessageBoxForm();
             form.MessageText = text;
             form.Caption = " ";
@@ -206,6 +215,12 @@
             return form.MessageBoxResult;
         }
 
+        /// <summary>
+        /// To show simple message to user with OK button
+        /// </summary>
+        /// <param name="text">The message that will be shown</param>
+        /// <param name="caption">The title of messagebox</param>
+        /// <returns></returns>
         public static DialogResult Show(string text, string caption)
         {
             MessageBoxForm form = new MessageBoxForm();
@@ -218,6 +233,13 @@
             return form.MessageBoxResult;
         }
 
+        /// <summary>
+        /// To show message with diffrent combinition of buttons
+        /// </summary>
+        /// <param name="text">The message that will be shown</param>
+        /// <param name="caption">The title of messagebox</param>
+        /// <param name="buttons">The combination of buttons</param>
+        /// <returns></returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons)
         {
             MessageBoxForm form = new MessageBoxForm();
@@ -229,6 +251,14 @@
             return form.MessageBoxResult;
         }
 
+        /// <summary>
+        /// To show message with diffrent combinition of buttons and ability to choose default button
+        /// </summary>
+        /// <param name="text">The message that will be shown</param>
+        /// <param name="caption">The title of messagebox</param>
+        /// <param name="buttons">The combination of buttons</param>
+        /// <param name="defaultButton">To select default button, button numbers are according to combination name</param>
+        /// <returns></returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxDefaultButton defaultButton)
         {
             MessageBoxForm form = new MessageBoxForm();
@@ -240,6 +270,14 @@
             return form.MessageBoxResult;
         }
 
+        /// <summary>
+        /// To show message with diffrent combinition of buttons and ability to choose default button
+        /// </summary>
+        /// <param name="text">The message that will be shown</param>
+        /// <param name="caption">The title of messagebox</param>
+        /// <param name="buttons">The combination of buttons</param>
+        /// <param name="option">To select different options as Right To Left layout and text and also Persian controls</param>
+        /// <returns></returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxOptions option)
         {
             MessageBoxForm form = new MessageBoxForm();
@@ -252,6 +290,15 @@
             return form.MessageBoxResult;
         }
 
+        /// <summary>
+        /// To show message with diffrent combinition of buttons and ability to choose default button
+        /// </summary>
+        /// <param name="text">The message that will be shown</param>
+        /// <param name="caption">The title of messagebox</param>
+        /// <param name="buttons">The combination of buttons</param>
+        /// <param name="defaultButton">To select default button, button numbers are according to combination name</param>
+        /// <param name="option">To select different options as Right To Left layout and text and also Persian controls</param>
+        /// <returns></returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxDefaultButton defaultButton, MessageBoxOptions option)
         {
             MessageBoxForm form = new MessageBoxForm();
